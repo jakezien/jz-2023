@@ -1,29 +1,131 @@
-[
-  {
-      "id": 1,
-      "title": "Software Developer",
-      "company": "Tech Corp",
-      "startDate": "2020-01-01",
-      "endDate": "2022-01-01",
-      "description": [
-        "Developed software solutions for clients."
-      ],
-      "achievements": [
-        "Implemented feature X",
-        "Reduced bugs by 20%"
-      ]
-  },
-  {
-      "id": 2,
-      "title": "Web Developer",
-      "company": "Web Works",
-      "startDate": "2018-05-01",
-      "endDate": "2019-12-31",
-      "description": [
-        "Built and maintained company website."
-      ],
-      "achievements": [
-        "Increased site speed by 50%", "Implemented responsive design"
-      ]
+{
+    "experience": [
+        {
+            "id": 1,
+            "company": "Culdesac",
+            "title": "Lead Product Designer",
+            "startDate": "September 2021",
+            "endDate": "September 2023",
+            "description": [
+                "First full-time design hire; reported to and collaborated directly with both cofounders",
+                "Owned the digital side of the resident experience, from business strategy to eng-ready design specs & occasional commits",
+                "Owned strategy, research, and design on marketing & ecommerce websites (e.g. browsing and leasing apartments online)",
+                "Expanded design beyond a screen-based practice into a strategic partner of product and leadership",
+                "Mentored younger colleagues who found the design education \"inspiring\""
+            ]
+        },
+        {
+            "id": 1,
+            "company": "CBRE Build",
+            "title": "Senior Product Designer",
+            "startDate": "January 2016",
+            "endDate": "September 2021",
+            "description": [
+                "In a self-initiated project, I researched and designed CBRE Build, a new brand for tech teams within CBRE, and won approval directly from CEO Bob Sulentic",
+                "Led product, and led design for Site IQ, a modern web application for broker teams; product's value & strategy were durable enough that it is still in active use & development",
+                "Implemented CBRE Build branding in digital and physical spaces across CBRE, including NYC, Seattle, Texas, and India",
+                "CBRE Build's brand was reviewed (positively!) in Brand New, proving the brand's purpose of stretching CBRE into new spaces",
+                "Only design/eng staffer to survive an 80% staff reduction"
+            ]
+        },
+        {
+            "id": 1,
+            "company": "Floored",
+            "title": "Solo Designer",
+            "startDate": "March 2012",
+            "endDate": "January 2016",
+            "description": [
+                "Acquired by CBRE, the world's largest commercial real estate company, in Jan 2016",
+                "Collaborated directly with founders and founding engineers  to own ux and ui design for Floored's flagship software products",
+                "First design hire",
+                "Owned and implemented design of Floored brand and marketing",
+                "Owned UI design for Floored's products, from sketch to delivery with engineers",
+                "CBRE Build's brand was reviewed (positively!) in Brand New, proving the brand's purpose of stretching CBRE into new spaces",
+                "Only design/eng staffer to survive an 80% staff reduction"
+            ]
+        },
+        {
+            "id": 1,
+            "company": "Stamped",
+            "title": "Designer",
+            "startDate": "June 2011",
+            "endDate": "February 2012",
+            "description": [
+                "Acquired by Yahoo 2012",
+                "Hired out of college by founding team of ex-Googlers, in their first design hire",
+                "Collaborated on product design with lead designer and founders",
+                "Contributed design mockups, UI code, and a central product concept"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "id": 1,
+            "school": "Rhode Island School of Design (RISD)",
+            "location": "Providence, RI",
+            "degreeType": "BA",
+            "degreeTitle": "Graphic Design",
+            "startDate": "2007",
+            "endDate": "2011",
+            "description": "",
+            "achievements": []
+        },
+        {
+            "id": 1,
+            "school": "Brown University",
+            "location": "Providence, RI",
+            "degreeType": "Minor",
+            "degreeTitle": "Computer Science",
+            "endDate": "2011",
+            "description": "Through RISD's cross-registration program with Brown, and summer courses at Carnegie Mellon University (Pittsburgh, PA), I earned credits worth a minor in Computer Science.",
+            "achievements": []
+        }
+    ],
+    "brags": [
+        {
+            "id": 1,
+            "title": "'Inventor', Pivot Power",
+            "publisher": "Quirky",
+            "startDate": "2010",
+            "description": "I created the idea for Pivot Power, Quirky's iconic bestseller.",
+            "achievements": [
+                "Created a unique design that, with the help of Quirky designers & engineers, became the company's breakout hit, winning premium placement in national retailers",
+                "Millions of units sold from Bed Bath & Beyond to the MOMA Store",
+                "First-listed Inventor on dozens of patents owned by Quirky",
+                "Press: The New York Times, The Wall Street Journal, Wired, Engadget, Gizmodo",
+                "Awards: Red Dot Design Award "
+            ],
+            "awards": [
+                {
+                    "name": "Red Dot Design Award 2012",
+                    "url": "https://www.red-dot.org/project/pivot-power-29708"
+                },
+                {
+                    "name": "Included in the Cooper-Hewitt Smithsonian Design Museum's permanent collection, and the exhibition Beautiful Users",
+                    "url": "https://www.cooperhewitt.org/exhibitions/beautiful-users/"
+                }
+            ],
+            "press": [
+                "The New York Times",
+                "The Wall Street Journal",
+                "Wired",
+                "Engadget",
+                "Gizmodo",
+                "CNET"
+            ]
+        }
+    ],
+    "personal": [
+        "Talented communicator; natural mentor/educator",
+        "Will probably make you laugh, usually intentionally",
+        "Loves animals"
+    ],
+    "tech": [
+        "Swift: AppKit, UIKit & SwiftUI,",
+        "JS: Node, React, Gatsby, Next;",
+        "CSS: Tailwind, styled-components, Stylus, sass, SCSS, and so on",
+        "Some Ruby & Python",
+        "Figma, Adobe, Framer, Affinity, you name it",
+        "Keyboard shortcut savant"
+    ]
   }
-]
