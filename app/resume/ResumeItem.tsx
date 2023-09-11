@@ -14,7 +14,7 @@ type Props = {
 
 const ResumeItemComponent: React.FC<Props> = ({ item }) => {
     return (
-        <div>
+        <div className="mb-4">
             <h2>{item.title}</h2>
             <h3>{item.company}</h3>
             <p>{item.description}</p>

@@ -18,7 +18,6 @@ export async function getLocalData(): Promise<ResumeItem[]> {
 
 async function ResumePage() {
   const resumeItems = await getLocalData()
-  console.log("poop" + resumeItems.length)
 
   return (
     <div>
