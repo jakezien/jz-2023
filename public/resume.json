@@ -1,0 +1,29 @@
+[
+  {
+      "id": 1,
+      "title": "Software Developer",
+      "company": "Tech Corp",
+      "startDate": "2020-01-01",
+      "endDate": "2022-01-01",
+      "description": [
+        "Developed software solutions for clients."
+      ],
+      "achievements": [
+        "Implemented feature X",
+        "Reduced bugs by 20%"
+      ]
+  },
+  {
+      "id": 2,
+      "title": "Web Developer",
+      "company": "Web Works",
+      "startDate": "2018-05-01",
+      "endDate": "2019-12-31",
+      "description": [
+        "Built and maintained company website."
+      ],
+      "achievements": [
+        "Increased site speed by 50%", "Implemented responsive design"
+      ]
+  }
+]
