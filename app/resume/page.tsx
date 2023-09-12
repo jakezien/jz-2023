@@ -6,16 +6,18 @@ import ResumeItemPersonal from './ResumeItemPersonal';
 import ResumeItemTech from './ResumeItemTech';
 import ResumeSectionWrapper from './ResumeSectionWrapper';
 import { IBM_Plex_Mono } from 'next/font/google'
+import resumeJson from '../../public/resume.json'
 const plex = IBM_Plex_Mono({ weight: ['400', '700'], subsets: ['latin'] })
 
 
 async function getLocalData(): Promise<ResumeData> {
-  const baseURL = "http://localhost:3000"
-  const response = await fetch(baseURL + '/api/resume');
-  if (!response.ok) {
-    throw new Error('Failed to fetch resume data.');
-  }
-  return await response.json() as ResumeData;
+  // const baseURL = "http://localhost:3000"
+  // const response = await fetch(baseURL + '/api/resume');
+  // if (!response.ok) {
+  //   throw new Error('Failed to fetch resume data.');
+  // }
+  // return await response.json() as ResumeData;
+  return resumeJson as ResumeData;
 }
 
 
