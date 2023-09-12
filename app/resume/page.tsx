@@ -9,20 +9,8 @@ import { IBM_Plex_Mono } from 'next/font/google'
 import resumeJson from '../../public/resume.json'
 const plex = IBM_Plex_Mono({ weight: ['400', '700'], subsets: ['latin'] })
 
-
-async function getLocalData(): Promise<ResumeData> {
-  // const baseURL = "http://localhost:3000"
-  // const response = await fetch(baseURL + '/api/resume');
-  // if (!response.ok) {
-  //   throw new Error('Failed to fetch resume data.');
-  // }
-  // return await response.json() as ResumeData;
-  return resumeJson as ResumeData;
-}
-
-
 async function ResumePage() {
-  let resumeData = await getLocalData()
+  let resumeData = resumeJson as ResumeData
   let h1ClassName = plex.className + " font-bold tracking-normal"
   return (
     <div className='flex flex-col items-center'>
