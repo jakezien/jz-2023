@@ -9,7 +9,7 @@ type Props = {
 const ResumeItemEducation: React.FC<Props> = ({ item }) => {
     return (
         <ResumeItemWrapper>
-            <h2>{item.school}</h2>
+            <h2 className='text-stone-700'>{item.school}</h2>
             <h3 className='font-normal'>{item.degreeType} in {item.degreeTitle}</h3>
             <p className='mb-1'>{item.startDate ? `${item.startDate} - ${item.endDate}` : item.endDate} &nbsp;|&nbsp; {item.location}</p>
             {item.description && <p>{item.description}</p>}

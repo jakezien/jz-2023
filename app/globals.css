@@ -19,7 +19,7 @@
     /* @apply font-medium; */
     @apply mt-16;
     @apply mb-4;
-    @apply text-orange-600
+    @apply text-designOrange
   }
   
   h2 {
@@ -38,11 +38,14 @@
   
   h4 {
     @apply text-lg;
-    @apply mt-1;
-    @apply mb-0.5;
+    @apply mt-2;
+    @apply mb-0;
     @apply font-medium;
   }
   
+  ul { 
+    list-style-type: '- '; 
+  }
 
 
 }

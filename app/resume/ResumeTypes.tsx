@@ -1,6 +1,8 @@
 export type Experience = {
     id: number;
     company: string;
+    companyOneliner: string;
+    companyExit?: string;
     title: string;
     startDate: string;
     endDate: string;
@@ -36,6 +38,7 @@ export type Education = {
 };
 
 export type ResumeData = {
+    blurb: string;
     experience: Experience[];
     brags: Brag[];
     education: Education[];

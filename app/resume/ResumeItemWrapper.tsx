@@ -6,7 +6,7 @@ type Props = {
 };
 
 const ResumeItemWrapper: React.FC<Props> = ({ children }) => {
-  return <div className="resume-item-wrapper mb-4">{children}</div>;
+  return <div className="resume-item-wrapper mb-8">{children}</div>;
 };
 
 export default ResumeItemWrapper;

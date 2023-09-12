@@ -3,6 +3,8 @@
 import React from 'react';
 import { Brag } from './ResumeTypes';
 import ResumeItemWrapper from './ResumeItemWrapper';
+import { IBM_Plex_Mono } from 'next/font/google'
+const plex = IBM_Plex_Mono({ weight: ['400', '600'], subsets: ['latin'] })
 
 type Props = {
     item: Brag;
@@ -11,10 +13,12 @@ type Props = {
 const ResumeItemBrag: React.FC<Props> = ({ item }) => {
     return (
         <ResumeItemWrapper>
-            <h2>{item.title}</h2>
-            <h3 className='font-normal'>{item.publisher}</h3>
-            <p>{item.startDate}</p>
-            {item.description && <p>{item.description}</p>}
+            <div className='mb-2'>
+                <h2 className='text-stone-700'>{item.title}</h2>
+                <h3 className='m-0 mr-1 text-stone-500'>at {item.publisher}</h3>
+                <p className='m-0 text-stone-500 text-base font-medium'>{item.startDate}</p>
+                <p className='m-0 text-stone-400 text-base font-medium'>{item.description}</p>
+            </div>
             <ul>
                 {item.achievements.map((achievement, index) => (
                     <li key={index}>{achievement}</li>

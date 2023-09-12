@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-     
+      colors: {
+        "designOrange": "#FF6B00"
+      }
     },
   },
   plugins: [],

@@ -6,7 +6,7 @@ import ResumeItemPersonal from './ResumeItemPersonal';
 import ResumeItemTech from './ResumeItemTech';
 import ResumeSectionWrapper from './ResumeSectionWrapper';
 import { IBM_Plex_Mono } from 'next/font/google'
-const plex = IBM_Plex_Mono({ weight: ['100','300','500',"700"], subsets: ['latin'] })
+const plex = IBM_Plex_Mono({ weight: ['400', '700'], subsets: ['latin'] })
 
 
 export async function getLocalData(): Promise<ResumeData> {
@@ -21,10 +21,14 @@ export async function getLocalData(): Promise<ResumeData> {
 
 async function ResumePage() {
   let resumeData = await getLocalData()
-  let h1ClassName = plex.className + " font-semibold tracking-normal"
+  let h1ClassName = plex.className + " font-bold tracking-normal"
   return (
     <div className='flex flex-col items-center'>
       <div className='max-w-xl mx-8 mt-16 mb-48'> 
+      <ResumeSectionWrapper>
+          <h1 className={plex.className + ' text-5xl tracking-tight font-semibold'}>Jake Zien</h1>
+          <p className={plex.className + ' text-xl text-stone-500 tracking-tight'}>{resumeData.blurb}</p>
+      </ResumeSectionWrapper>
 
       <ResumeSectionWrapper>
         <h1 className={h1ClassName}>Experience</h1>
