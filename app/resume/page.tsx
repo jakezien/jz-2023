@@ -9,7 +9,7 @@ import { IBM_Plex_Mono } from 'next/font/google'
 const plex = IBM_Plex_Mono({ weight: ['400', '700'], subsets: ['latin'] })
 
 
-export async function getLocalData(): Promise<ResumeData> {
+async function getLocalData(): Promise<ResumeData> {
   const baseURL = "http://localhost:3000"
   const response = await fetch(baseURL + '/api/resume');
   if (!response.ok) {
