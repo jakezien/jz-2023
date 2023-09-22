@@ -1,16 +1,27 @@
-'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { headers } from 'next/headers';
 import monogramImage from '../public/monogram.jpg'
 import { IBM_Plex_Mono } from 'next/font/google'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
+import { Project } from './api/projects/route';
 
 const plex = IBM_Plex_Mono({ weight: ['700'], subsets: ['latin'] })
 
-export default function Home() {
+export default async function Home() {
+
+  async function getData() {
+    const domain = headers().get('host');
+    const res = await fetch(`http://${domain}/api/projects`)
+    if (!res.ok) {
+      // This will activate the closest `error.js` Error Boundary
+      throw new Error('Failed to fetch data')
+    }
+    return res.json()
+  }
 
   let h1ClassName = plex.className + " font-bold tracking-normal my-2 cursor-pointer"
+  let data = await getData()
+  let projects:Project[] = data.projects
 
   return (
     <main className="min-h-screen flex flex-row items-center justify-center py-24">
@@ -21,19 +32,19 @@ export default function Home() {
         <h2 className='mt-4 font-medium text-stone-400'>Stay tuned for more</h2>
       </div>
       <figure className='block md: w-3/4'>
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={1}
-          onSlideChange={() => { }}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          <SwiperSlide>
-            Slide 1
-          </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        </Swiper>
+      {projects.map((project, index) => (
+        <div key={index}>
+          <h3>{project.description}</h3>
+          <ul>
+            {project.images.map((image, imageIndex) => (
+              <li key={imageIndex}>
+                <p>{image.src}</p>
+                <p>{image.description}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}        
       </figure>
     </main>
   )

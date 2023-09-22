@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 import fs from 'fs/promises'
 import path from 'path'
 
-interface Project {
+export interface Project {
   title: string
   images: ProjectImage[]
   description?: string
@@ -12,12 +12,12 @@ interface Project {
   press?: Press[]
 }
 
-interface ProjectImage {
+export interface ProjectImage {
   src: string
   description?: string 
 }
 
-interface Press {
+export interface Press {
   name: string
   url: string
 }
@@ -31,7 +31,6 @@ async function traverseDirectory(directory: string, projectList: Project[]): Pro
       await traverseDirectory(fullPath, projectList);
     } else if (file.name === 'project.json') {
       const data = await fs.readFile(fullPath, 'utf-8');
-      console.log(data)
       projectList.push(JSON.parse(data) as Project);
     }
   }
