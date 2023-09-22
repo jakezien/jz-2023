@@ -1,0 +1,18 @@
+{
+  "description": "Invented a tech brand for the world's largest commercial real estate company.",
+  "org": "CBRE",
+  "press": {
+    "name": "Brand New",
+    "url": "https://www.underconsideration.com/brandnew/archives/new_logo_and_identity_for_cbre_build_done_in_house.php"
+  },
+  "images": [
+    {
+      "src": "./style-guide.png",
+      "description": ""
+    },
+    {
+      "src": "./swag.png",
+      "description": "CBRE Build brand swag."
+    }
+  ]
+}

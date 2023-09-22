@@ -1,0 +1,14 @@
+{
+  "description": "Owned digital resident experience for real estate developer building car-free neighborhoods.",
+  "org": "Culdesac",
+  "images": [
+    {
+      "src": "./hack-week-final.jpg",
+      "description": "Design for hack week t-shirts"
+    },
+    {
+      "src": "./monogram-orange.jpg",
+      "description": "Test monogram"
+    }
+  ]
+}
