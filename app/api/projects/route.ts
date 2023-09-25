@@ -10,6 +10,7 @@ export interface Project {
   description?: string
   org?: string
   press?: Press[]
+  date?: string
 }
 
 export interface ProjectImage {
@@ -39,8 +40,14 @@ async function traverseDirectory(directory: string, projectList: Project[]): Pro
 }
 
 async function buildProjectList(): Promise<Project[]> {
-  const projectList: Project[] = [];
+  var projectList: Project[] = [];
   await traverseDirectory(path.join(process.cwd(), 'public'), projectList);
+  projectList = projectList.sort((a, b) => { 
+    const dateA = new Date(a.date ?? "");
+    const dateB = new Date(b.date ?? "");
+    return dateB.getTime() - dateA.getTime(); // This will sort in descending order, so the most recent date comes first.
+  })
+
   return projectList;
 }
 

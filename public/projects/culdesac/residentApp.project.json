@@ -1,0 +1,20 @@
+{
+  "title": "Resident app",
+  "description": "Led design for Culdesac's digital resident experience.",
+  "date":"Apr 2023",
+  "org": "Culdesac",
+  "images": [
+    {
+      "src": "/projects/culdesac/resident-app-0.jpg",
+      "description": "Screens from the Culdesac resident app."
+    },
+    {
+      "src": "/projects/culdesac/resident-app-1.jpg",
+      "description": "Design assets"
+    },
+    {
+      "src": "/projects/culdesac/resident-app-process.jpg",
+      "description": "Process work"
+    }
+  ]
+}

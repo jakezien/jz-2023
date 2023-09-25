@@ -1,16 +1,18 @@
 {
   "title": "Brand work",
   "description": "Owned digital resident experience for real estate developer building car-free neighborhoods.",
+  "date": "2022",
   "org": "Culdesac",
   "images": [
     {
-      "src": "/projects/culdesac/hack-week-final.jpg",
+      "src": "/projects/culdesac/hack-week.jpg",
       "description": "Design for hack week t-shirts",
       "bgColor": "#049134"
     },
     {
-      "src": "/projects/culdesac/monogram-orange.jpg",
-      "description": "Test monogram"
+      "src": "/projects/culdesac/cholla.jpg",
+      "description": "Branding for Little Cholla, Culdesac's night market",
+      "bgColor": "#fff"
     }
   ]
 }

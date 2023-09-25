@@ -25,6 +25,7 @@ async function ResumePage() {
         {resumeData.experience.map((experienceItem: Experience) => (
             <ResumeItemExperience key={experienceItem.id} item={experienceItem} />
         ))}
+          
       </ResumeSectionWrapper>
   
       <ResumeSectionWrapper>
