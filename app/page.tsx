@@ -26,7 +26,7 @@ export default async function Home() {
   return (
     <>
       <div className='h-full w-full lg:flex lg:flex-row lg:items-center'>
-        <figure className='aspect-3/4 lg:w-3/4 lg:aspect-4/3'>
+        <figure className='aspect-3/4 lg:w-3/4 lg:h-full'>
           <Gallery className={`w-full h-full`}>
             {projects.map((project, index) => (
               project.images.map((image, imageIndex) => {
