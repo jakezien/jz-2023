@@ -14,7 +14,9 @@ export interface Project {
 
 export interface ProjectImage {
   src: string
+  alt: string
   description?: string 
+  bgColor?: string
 }
 
 export interface Press {
@@ -29,7 +31,7 @@ async function traverseDirectory(directory: string, projectList: Project[]): Pro
     const fullPath = path.join(directory, file.name);
     if (file.isDirectory()) {
       await traverseDirectory(fullPath, projectList);
-    } else if (file.name === 'project.json') {
+    } else if (file.name.includes('project.json')) {
       const data = await fs.readFile(fullPath, 'utf-8');
       projectList.push(JSON.parse(data) as Project);
     }

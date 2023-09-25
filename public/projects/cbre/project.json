@@ -1,4 +1,5 @@
 {
+  "title": "CBRE Build",
   "description": "Invented a tech brand for the world's largest commercial real estate company.",
   "org": "CBRE",
   "press": {
@@ -7,11 +8,11 @@
   },
   "images": [
     {
-      "src": "./style-guide.png",
+      "src": "/projects/cbre/style-guide.png",
       "description": ""
     },
     {
-      "src": "./swag.png",
+      "src": "/projects/cbre/swag.png",
       "description": "CBRE Build brand swag."
     }
   ]

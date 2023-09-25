@@ -1,13 +1,15 @@
 {
+  "title": "Brand work",
   "description": "Owned digital resident experience for real estate developer building car-free neighborhoods.",
   "org": "Culdesac",
   "images": [
     {
-      "src": "./hack-week-final.jpg",
-      "description": "Design for hack week t-shirts"
+      "src": "/projects/culdesac/hack-week-final.jpg",
+      "description": "Design for hack week t-shirts",
+      "bgColor": "#049134"
     },
     {
-      "src": "./monogram-orange.jpg",
+      "src": "/projects/culdesac/monogram-orange.jpg",
       "description": "Test monogram"
     }
   ]
