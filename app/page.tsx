@@ -3,6 +3,7 @@ import { IBM_Plex_Mono, Inter } from 'next/font/google'
 import { Project } from './api/projects/route';
 import Gallery from './components/Gallery'
 import Header from "./components/Header"
+import {headers} from 'next/headers'
 
 const plex = IBM_Plex_Mono({ weight: ['700'], subsets: ['latin'] })
 const inter = Inter({ weight: ['400','500'], subsets: ['latin'] })
@@ -10,8 +11,7 @@ const inter = Inter({ weight: ['400','500'], subsets: ['latin'] })
 export default async function Home() {
 
   async function getData() {
-    // const domain = headers().get('host');
-    const domain = "localhost:3000"
+    const domain = headers().get('host');
     const res = await fetch(`http://${domain}/api/projects`)
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
@@ -31,7 +31,7 @@ export default async function Home() {
         <figure className='aspect-3/4 lg:w-3/4 lg:h-full'>
           <Gallery className={`w-full h-full`}>
             {projects.map((project, index) => (
-              project.images.map((image, imageIndex) => {
+              project.images.map((image, imageIndex) => {  
                 return (
                   <div className='flex flex-col h-full justify-between' key={index}>
 
