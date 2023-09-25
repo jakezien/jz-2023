@@ -2,6 +2,7 @@
 import { Children } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'
+import GallerySlide from './GallerySlide';
 
 type Props = {
   children: React.ReactNode;
@@ -10,10 +11,12 @@ type Props = {
 
 const Gallery: React.FC<Props> = ({ children, className }) => {
   return (
-      <Swiper className={className}>
+      <Swiper className={className} loop>
       {Children.map(children, child => (
         <SwiperSlide className=''>
-          {child}
+          <GallerySlide>
+            {child}
+          </GallerySlide>
         </SwiperSlide>
       ))}
       </Swiper>
@@ -21,3 +24,4 @@ const Gallery: React.FC<Props> = ({ children, className }) => {
 };
 
 export default Gallery;
+

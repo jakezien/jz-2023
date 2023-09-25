@@ -35,7 +35,6 @@ export default async function Home() {
                 return (
                   <div className='flex flex-col h-full justify-between' key={index}>
 
-
                   <Image
                     src={image.src} alt={image.alt}
                     width={2000} height={2000}
