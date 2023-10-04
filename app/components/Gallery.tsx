@@ -33,36 +33,41 @@ const Gallery: React.FC<Props> = ({ projects, className }) => {
   })
 
   const [currentItem, setCurrentItem] = useState<GalleryItem>(galleryItems[0])
-
+  const [initialTranslation, setInitialTranslation] = useState<number>(0.0)
+  const [translation, setTranslation] = useState<number>(0.0)
+  
   function updateCurrentItem(swiper: SwiperClass) {
-    let index = swiper.activeIndex
-    
-    // if (index < 0) {
-    //   index = galleryItems.length - 1
-    // }
+    let index = swiper.realIndex  
     const newItem = galleryItems[index]
-    console.log(index, currentItem.project.title, newItem.project.title, galleryItems)
-    if (currentItem !== newItem) {
+    if (currentItem.image != newItem.image) {
       setCurrentItem(newItem)
+      startNewTranslation(swiper)
+      updateTranslate(swiper)
     }
+  } 
+
+  function startNewTranslation(swiper: SwiperClass) {
+    console.log('new translation', swiper.translate)
+    setInitialTranslation(swiper.translate)
+    updateTranslate(swiper)
+  }
+
+  function updateTranslate(swiper: SwiperClass) {
+    console.log('translation', (swiper.translate - initialTranslation))
+    setTranslation(swiper.translate - initialTranslation)
   }
 
   return (
     <>
       <Swiper
+        loop
         className={className}
-        onSetTranslate={(swiper, translate) => {
-          updateCurrentItem(swiper)
-        }}
-        onSlideChange={(swiper) => {
-          updateCurrentItem(swiper)
-        }}
-        onSlideChangeTransitionStart={(swiper) => {
-          updateCurrentItem(swiper)
-        }}
-        onSlideResetTransitionStart={(swiper) => {
-          updateCurrentItem(swiper)
-        }}
+        onSetTranslate={(slider) => { updateTranslate(slider); updateCurrentItem(slider) }}
+        onSlideChange={updateCurrentItem}
+        onSlideChangeTransitionStart={updateCurrentItem}
+        onSlideResetTransitionStart={updateCurrentItem}
+        onTransitionEnd={updateTranslate}
+        onSliderFirstMove={startNewTranslation}
       >
         { galleryItems.map(({project, projectIndex, image, imageIndex}, index) => {
             return (
@@ -86,7 +91,7 @@ const Gallery: React.FC<Props> = ({ projects, className }) => {
           })
         }
       </Swiper>
-      <div>
+      <div style={{transform: `translateX(${translation}px)`}} >
         <h2>{currentItem?.project.title}</h2>
       </div>
     </>
