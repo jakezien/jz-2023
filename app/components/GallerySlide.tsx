@@ -15,8 +15,8 @@ const GallerySlide: React.FC<Props> = ({ children, className }) => {
     <div className={className + ' h-full w-full'} onClick={() => {
       swiper?.slideNext()
     }}>
-          {children}
-        </div>
+      {children}
+    </div>
   );
 };
 
