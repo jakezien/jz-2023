@@ -31,7 +31,6 @@ export default async function Home() {
           <Gallery className={`w-full h-full`} projects={projects}/>
         </figure>
       </div>
-
     </>
   )
 }
