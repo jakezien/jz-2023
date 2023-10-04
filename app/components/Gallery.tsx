@@ -1,96 +1,27 @@
 "use client";
-import { Children, useState, createContext, useContext, PropsWithChildren, useEffect } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 
 import GallerySlide from "./GallerySlide";
-import { Project, ProjectImage } from "../api/projects/route";
 import Image from "next/image";
-import { Dispatch, SetStateAction } from "react";
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import GalleryInfo from "./GalleryInfo";
-
+import { useGallery } from "../context/GalleryContext";
 
 type Props = {
-  projects: Project[];
   className?: string;
 };
 
-export interface GalleryItem {
-  project: Project,
-  projectIndex: number,
-  image: ProjectImage,
-  imageIndex: number
-}
 
 
-
-const GalleryContext = createContext<GalleryContextType>({
-  currentItem: {
-    project: { title: "", images: [] },
-    projectIndex: 0,
-    image: { src: "", alt: "" },
-    imageIndex: 0
-  },
-  setCurrentItem: () => { },
-  translation: 0,
-  setTranslation: () => {}
-  
-});
-
-export const GalleryProvider: React.FC<PropsWithChildren> = ({ children }) => {
-
-  let defaultGalleryItem = {
-    project: { title: "", images: []},
-    projectIndex: 0,
-    image: { src: "", alt: ""},
-    imageIndex: 0
-  }
-
-  const [currentItem, setCurrentItem] = useState<GalleryItem>(defaultGalleryItem);
-  const [translation, setTranslation] = useState<number>(0.0);
-
-  return (
-    <GalleryContext.Provider value={{
-      currentItem,
-      setCurrentItem,
-      translation,
-      setTranslation
-    }}>
-      {children}
-    </GalleryContext.Provider>
-  );
-};
-
-interface GalleryContextType {
-  currentItem: GalleryItem,
-  setCurrentItem:  Dispatch<SetStateAction<GalleryItem>>,
-  translation: number,
-  setTranslation:  Dispatch<SetStateAction<number>>,
-}
-
-export const useGallery = () => {
-  return useContext(GalleryContext)
-}
-
-const Gallery: React.FC<Props> = ({ projects, className }) => {
-  
-  const galleryItems = projects.flatMap((project, projectIndex) => {
-    return project.images.map((image, imageIndex) => {
-      return {
-        project: project,
-        projectIndex: projectIndex,
-        image: image,
-        imageIndex: imageIndex
-      }
-    })
-  })
+const Gallery: React.FC<Props> = ({ className }) => {
   
   const {
+    allItems: galleryItems,
     currentItem,
     setCurrentItem,
     translation,
@@ -100,16 +31,12 @@ const Gallery: React.FC<Props> = ({ projects, className }) => {
   const p = useGallery()
   console.log(p)
 
-  useEffect(() => {
-    setCurrentItem(galleryItems[0]);
-  }, []);
-
   const [initialTranslation, setInitialTranslation] = useState<number>(0.0)
   
   function updateCurrentItem(swiper: SwiperClass) {
     let index = swiper.realIndex  
     const newItem = galleryItems[index]
-    if (currentItem == undefined) {
+    if (currentItem == undefined || newItem == undefined) {
       return
     }
 
@@ -135,6 +62,7 @@ const Gallery: React.FC<Props> = ({ projects, className }) => {
   
   return (
     <>
+      
       <Swiper
         loop
         autoplay={{
@@ -176,7 +104,8 @@ const Gallery: React.FC<Props> = ({ projects, className }) => {
         
       </Swiper>
 
-      <GalleryInfo currentItem={currentItem} translation={translation} />
+        
+
     </>
   );
 };
