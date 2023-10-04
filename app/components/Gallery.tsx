@@ -51,7 +51,6 @@ const Gallery: React.FC<Props> = ({ projects, className }) => {
     <>
       <Swiper
         className={className}
-        
         onSetTranslate={(swiper, translate) => {
           updateCurrentItem(swiper)
         }}
