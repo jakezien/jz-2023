@@ -6,7 +6,11 @@ import { Project, ProjectImage } from "../api/projects/route";
 interface GalleryContextType {
   allItems: GalleryItem[],
   currentItem: GalleryItem,
-  setCurrentItem:  Dispatch<SetStateAction<GalleryItem>>,
+  setCurrentItem: Dispatch<SetStateAction<GalleryItem>>,
+  nextItem: GalleryItem,
+  setNextItem: Dispatch<SetStateAction<GalleryItem>>,
+  prevItem: GalleryItem,
+  setPrevItem: Dispatch<SetStateAction<GalleryItem>>,
   translation: number,
   setTranslation:  Dispatch<SetStateAction<number>>,
 }
@@ -25,13 +29,16 @@ let defaultGalleryItem = {
   imageIndex: 0
 }
 
-const defaultContextValue = {
+const defaultContextValue: GalleryContextType = {
   allItems: [],
   currentItem: defaultGalleryItem,
   setCurrentItem: () => { },
+  nextItem: defaultGalleryItem,
+  setNextItem: () => { },
+  prevItem: defaultGalleryItem,
+  setPrevItem: () => { },
   translation: 0,
   setTranslation: () => {}
-  
 }
 
 const GalleryContext = createContext<GalleryContextType>(defaultContextValue)
@@ -54,6 +61,8 @@ export const GalleryProvider: React.FC<PropsWithChildren<GalleryProviderProps>> 
   })
 
   const [currentItem, setCurrentItem] = useState<GalleryItem>(defaultGalleryItem);
+  const [nextItem, setNexttItem] = useState<GalleryItem>(defaultGalleryItem);
+  const [prevItem, setPrevItem] = useState<GalleryItem>(defaultGalleryItem)
   const [translation, setTranslation] = useState<number>(0.0);
 
   useEffect(() => {
@@ -65,6 +74,10 @@ export const GalleryProvider: React.FC<PropsWithChildren<GalleryProviderProps>> 
       allItems: allItems,
       currentItem: currentItem,
       setCurrentItem: setCurrentItem,
+      nextItem: nextItem,
+      setNextItem: setNexttItem,
+      prevItem: prevItem,
+      setPrevItem: setPrevItem,
       translation: translation,
       setTranslation: setTranslation
     }}>

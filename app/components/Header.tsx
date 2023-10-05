@@ -19,7 +19,7 @@ const Header: React.FC<Props> = ({ className }) => {
           <Image src={monogramImage} alt="JZ monogram" className="w-10 h-10 mr-2" width={60} height={60} />
           <p className={`text-lg ${plex.className} text-stone-700 font-bold`}>Jake Zien</p>
         </Link>
-        <p className={`ml-auto lg:ml-0 text-lg underline text-stone-500 ${plex.className}`}><Link href="/resume">My Resume</Link></p>
+        <p className={`ml-auto lg:ml-0 text-md underline text-stone-500 ${plex.className}`}><Link href="/resume">My Resume</Link></p>
       </div>
 
       <GalleryInfo className="hidden lg:block mt-4"/>

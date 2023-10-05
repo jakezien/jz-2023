@@ -9,7 +9,20 @@ interface Props {
 }
 
 const GalleryInfo: React.FC<Props> = ({className}) => {
-  const { currentItem, translation } = useGallery();
+  const { currentItem, nextItem, prevItem, translation } = useGallery();
+
+
+
+  function upcomingProjectTitle() {
+    return translation > 0 ? prevItem.project.title : nextItem.project.title
+  }
+  function upcomingProjectDesc() {
+    return translation > 0 ? prevItem.project.description : nextItem.project.description
+  }
+  function upcomingProjectOrg() {
+    return translation > 0 ? prevItem.project.org : nextItem.project.org
+  }
+
 
   if (currentItem === undefined) {
     return <></>;
@@ -24,8 +37,8 @@ const GalleryInfo: React.FC<Props> = ({className}) => {
           >
             Image
           </p>
-          <p style={{ transform: `translateX(${translation}px)` }}>
-            {currentItem.image && currentItem.image?.description}
+          <p className="leading-tight" style={{ transform: `translateX(${translation}px)` }}>
+            {currentItem.image?.description}
           </p>
         </div>
       )}
@@ -36,7 +49,10 @@ const GalleryInfo: React.FC<Props> = ({className}) => {
         >
           Project
         </p>
-        <div className="" style={{ transform: `translateX(${translation}px)` }}>
+        
+        <div className="" style={{
+          transform: upcomingProjectTitle() != currentItem.project.title ? `translateX(${translation}px)` : 'none'
+        }}>
           <p>{currentItem?.project.title}</p>
         </div>
       </div>
@@ -47,7 +63,9 @@ const GalleryInfo: React.FC<Props> = ({className}) => {
         >
           
         </p>
-        <div className="" style={{ transform: `translateX(${translation}px)` }}>
+        <div className="" style={{
+          transform: upcomingProjectDesc() != currentItem.project.description ? `translateX(${translation}px)` : 'none'
+        }}>
           <p className="m-0 leading-snug text-sm max-w-sm text-stone-500 ">
             {currentItem?.project.description}
           </p>
@@ -61,9 +79,11 @@ const GalleryInfo: React.FC<Props> = ({className}) => {
           Where
         </p>
         {currentItem.project.org && (
-          <p style={{ transform: `translateX(${translation}px)` }}>
+          <div className="" style={{
+            transform: upcomingProjectOrg() != currentItem.project.org ? `translateX(${translation}px)` : 'none'
+          }}>
             {currentItem?.project.org}
-          </p>
+          </div>
         )}
       </div>
     </div>

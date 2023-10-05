@@ -22,8 +22,9 @@ const Gallery: React.FC<Props> = ({ className }) => {
   
   const {
     allItems: galleryItems,
-    currentItem,
-    setCurrentItem,
+    currentItem, setCurrentItem,
+    nextItem, setNextItem,
+    prevItem, setPrevItem,
     translation,
     setTranslation
   } = useGallery()
@@ -34,14 +35,21 @@ const Gallery: React.FC<Props> = ({ className }) => {
   const [initialTranslation, setInitialTranslation] = useState<number>(0.0)
   
   function updateCurrentItem(swiper: SwiperClass) {
-    let index = swiper.realIndex  
+    let index = swiper.realIndex
+
     const newItem = galleryItems[index]
+    let nextIndex = index + 1 >= galleryItems.length - 1 ? 0 : index + 1
+    let prevIndex = index - 1 <= 0 ? galleryItems.length - 1 : index - 1
+
+    
     if (currentItem == undefined || newItem == undefined) {
       return
     }
 
     if (currentItem.image != newItem.image) {
       setCurrentItem(newItem)
+      setNextItem(galleryItems[nextIndex])
+      setPrevItem(galleryItems[prevIndex])
       startNewTranslation(swiper)
       updateTranslate(swiper)
     }
