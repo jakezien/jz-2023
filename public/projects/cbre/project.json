@@ -5,6 +5,14 @@
   "org": "CBRE",
   "images": [
     {
+      "src": "/projects/cbre/bob.jpg",
+      "description": "CEO Bob Sulentic with CBRE Build graphics"
+    },
+    {
+      "src": "/projects/cbre/signs.jpg",
+      "description": "Custom room signs at the CBRE Build office"
+    },
+    {
       "src": "/projects/cbre/style-guide.png",
       "description": "Pages from the Build brand style guide"
     },
