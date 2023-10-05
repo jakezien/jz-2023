@@ -1,0 +1,24 @@
+{
+  "title": "Marketing website for Tempe",
+  "url":"https://www.culdesac.com/tempe",
+  "description": "I owned the design of Culdesac's marketing website for its first development. The design process spanned research, content strategy, design, art direction, prototypes and my own commits.",
+  "date": "May 2023",
+  "org": "Culdesac",
+  "images": [
+    {
+      "src": "/projects/culdesac/website-0.jpg",
+      "description": "Screenshot of the site",
+      "bgColor": "#fff"
+    },
+    {
+      "src": "/projects/culdesac/website-1.jpg",
+      "description": "Screenshot of the site",
+      "bgColor": "#fff"
+    },
+    {
+      "src": "/projects/culdesac/website-2.jpg",
+      "description": "Screenshot of the site",
+      "bgColor": "#fff"
+    }
+  ]
+}

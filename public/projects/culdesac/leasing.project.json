@@ -5,20 +5,20 @@
   "org": "Culdesac",
   "images": [
     {
-      "src": "/projects/culdesac/leasing-process.jpg",
-      "description": "Wireframes and process work"
+      "src": "/projects/culdesac/leasing-1.jpg",
+      "description": "Screenshots from the Culdesac leasing application"
     },
     {
       "src": "/projects/culdesac/leasing-0.jpg",
       "description": "Screenshots from the Culdesac leasing application"
     },
     {
-      "src": "/projects/culdesac/leasing-1.jpg",
-      "description": "Screenshots from the Culdesac leasing application"
-    },
-    {
       "src": "/projects/culdesac/leasing-orangeprint.jpg",
       "description": "Markup for handoff to engineers"
+    },
+    {
+      "src": "/projects/culdesac/leasing-process.jpg",
+      "description": "Wireframes and process work"
     }
   ]
 }
