@@ -13,7 +13,7 @@ type Props = {
 
 const Header: React.FC<Props> = ({ className }) => {
   return (
-    <header className={`${className} flex flex-row align items-center lg:flex-col lg:h-full p-3 lg:p-4 lg:items-start`}>
+    <header className={`${className} flex flex-row align items-center p-3 w-full`}>
       <div className="flex flex-row items-center justify-between w-full">
         <Link href="/" className="no-underline flex flex-row items-center">
           <Image src={monogramImage} alt="JZ monogram" className="w-10 h-10 mr-2" width={60} height={60} />
@@ -21,9 +21,6 @@ const Header: React.FC<Props> = ({ className }) => {
         </Link>
         <p className={`ml-auto lg:ml-0 text-md underline text-stone-500 ${plex.className}`}><Link href="/resume">My Resume</Link></p>
       </div>
-
-      <GalleryInfo className="hidden lg:block mt-4"/>
-      
     </header>
   )
 }
