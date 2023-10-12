@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import monogramImage from '../../public/monogram.jpg'
 import { IBM_Plex_Mono } from "next/font/google"
-import GalleryInfo from "./GalleryInfo"
+
 // const inter = Inter({ weight: ['300', '400', '500', '700'], subsets: ['latin'] })
 const plex = IBM_Plex_Mono({ weight: ['400', '700'], subsets: ['latin'] })
 
