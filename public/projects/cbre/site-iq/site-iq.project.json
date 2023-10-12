@@ -1,0 +1,38 @@
+{
+  "slug": "site-iq",
+  "title": "Site IQ",
+  "description": "A private, approachable tool for broker teams to store their market information and use it to make documents.",
+  "date": "2018",
+  "org": "CBRE",
+  "images": [
+    {
+      "src": "/projects/cbre/site-iq/cover.jpg",
+      "description": "Screenshot of the Site IQ app"
+    },    
+    {
+      "src": "/projects/cbre/site-iq/wireframe.gif",
+      "description": "A lofi prototype I made to hash out the Site IQ workflow."
+    },
+    {
+      "src": "/projects/cbre/site-iq/site-iq-ui-1.png",
+      "description": "Screenshot of the Site IQ app"
+    },
+    {
+      "src": "/projects/cbre/site-iq/site-iq-ui-2.png",
+      "description": "Screenshot of the Site IQ app"
+    },
+    {
+      "src": "/projects/cbre/site-iq/landing-page.png",
+      "description": "The landing page I designed to promote Site IQ within CBRE"
+    },
+    {
+      "src": "/projects/cbre/site-iq/journey-map.png",
+      "description": "One output of our product definition research, a journey map for broker teams"
+    }
+
+  ],
+  "press": {
+    "name": "Brand New",
+    "url": "https://www.underconsideration.com/brandnew/archives/new_logo_and_identity_for_cbre_build_done_in_house.php"
+  }
+}

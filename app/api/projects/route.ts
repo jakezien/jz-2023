@@ -5,33 +5,6 @@ import fs from 'fs/promises'
 import path from 'path'
 
 
-export interface Project {
-  title: string
-  images: ProjectImage[]
-  description?: string
-  org?: string
-  press?: Press[]
-  date?: string
-}
-
-export interface Org {
-  name: string,
-  description: string,
-  role: string
-}
-
-export interface ProjectImage {
-  src: string
-  alt: string
-  description?: string 
-  bgColor?: string
-}
-
-export interface Press {
-  name: string
-  url: string
-}
-
 async function traverseDirectory(directory: string, projectList: Project[], orgList: Org[]): Promise<void> {
   const files = await fs.readdir(directory, { withFileTypes: true });
 

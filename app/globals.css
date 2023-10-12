@@ -16,14 +16,18 @@
 
   h1 {
     @apply text-4xl;
-    /* @apply font-medium; */
+    @apply font-bold;
+    @apply leading-tight;
+    @apply tracking-tight;
     @apply mt-16;
     @apply mb-4;
-    @apply text-designOrange
+    @apply text-stone-700
   }
   
   h2 {
     @apply text-2xl;
+    @apply leading-tight;
+    @apply tracking-tight;
     @apply font-semibold;
     @apply mt-2;
     @apply mb-0;

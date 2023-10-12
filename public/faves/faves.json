@@ -1,0 +1,159 @@
+[
+  {
+      "title": "Wede Harer Guzo",
+      "subtitle": "Hailu Mergia and the Dahlak Band",
+      "type": "Music",
+      "date": "2021-04-03 01:02",
+      "link": "https://www.youtube.com/watch?v=4vJAlNc36o0&list=PLMh9h8twoGyKxy4PJGb1_TLJMyg63bvyg",
+      "linkText": "Listen",
+      "description": "Strange, beautiful music that captures a wistful happiness."
+  },
+  {
+      "title": "Bob's Red Mill Muesli",
+      "subtitle": "Old Country Style",
+      "type": "Food",
+      "date": "2022-05-16 23:04",
+      "imageClassName": "2em",
+      "link": "",
+      "linkText": "Get some",
+      "description": "Or as we call it in our house, _Bob's Moulin Rouge._ Probably [60% of my diet.]()"
+  },
+  {
+      "title": "HEY",
+      "subtitle": "Email from Basecamp",
+      "type": "Software",
+      "date": "2021-04-03 01:00",
+      "imageClassName": "m-4",
+      "link": "https://www.hey.com",
+      "description": "Masterful design rescues email from decades of ossified ideas. A true solution to email hell."
+  },
+  {
+      "title": "88% Dark Chocolate",
+      "subtitle": "Endangered Species",
+      "type": "Food",
+      "date": "2020-08-23T12:44:00Z",
+      "imageClassName": ".5em",
+      "link": "https://shop.chocolatebar.com/panther-88-cocoa-3-oz-bar",
+      "linkText": "Buy a bar",
+      "description": "Excellent chocolate for a good cause. Cheaper per gram and more generous than the other fancy brands."
+  },
+  {
+      "title": "Barter 6",
+      "subtitle": "Young Thug",
+      "type": "Music",
+      "date": "2021-02-14 01:44",
+      "link": "https://www.youtube.com/watch?v=NUWvuuUs6t4&list=PLsReBoZpZEChFL5oACb_4IkSkvPLEyeX5",
+      "linkText": "Listen",
+      "description": "Thugger is a true innovator as a vocalist. Also possibly an alien."
+  },
+  {
+      "title": "Unread",
+      "type": "Software",
+      "date": "2021-02-22 16:02",
+      "imageClassName": "3.5em",
+      "link": "https://www.goldenhillsoftware.com/unread/",
+      "description": "My most-used app. Perfect interaction design that has weathered a decade of app fads unchanged, and good typography to boot. The only way to read RSS."
+  },
+  {
+      "title": "The Culture Clash",
+      "subtitle": "Jean Donaldson",
+      "type": "Book",
+      "date": "2022-05-16T22:59:37.121Z",
+      "imageClassName": "m-2",
+      "link": "",
+      "linkText": "Grab a copy",
+      "description": "Required reading for dog owners. Fascinating, funny, practical guide to behaviorism."
+  },
+  {
+      "title": "Zhenjiang Vinegar",
+      "subtitle": "Gold Plum",
+      "type": "Food",
+      "date": "2021-04-02 15:02",
+      "imageClassName": "m-2",
+      "link": "https://snukfoods.com/products/gold-plum-chinkiang-vinegar",
+      "linkText": "Get some",
+      "description": "Shanghainese black rice vinegar."
+  },
+  {
+      "title": "Lip Trip",
+      "subtitle": "Mountain Ocean",
+      "type": "Sundry",
+      "date": "2021-04-03 01:05",
+      "imageClassName": "mx-2",
+      "link": "https://smile.amazon.com/dp/B075TS42FW/",
+      "linkText": "Get some",
+      "description": "Low key the world's greatest lip balm."
+  },
+  {
+      "title": "Donuts",
+      "subtitle": "J Dilla",
+      "type": "Music",
+      "date": "2021-03-27 13:09",
+      "link": "https://www.youtube.com/watch?v=5nO7IA1DeeI&list=PL9dk_xtWpAkKXxzv_TfLWmlJj6G3quWQ2",
+      "linkText": "Listen",
+      "description": "A masterpiece produced in a hospital deathbed. Transcends the sum of its samples."
+  },
+  {
+      "title": "Buddy’s Burrito Bar",
+      "subtitle": "Brooklyn",
+      "type": "Place",
+      "date": "2021-04-02 15:03",
+      "link": "https://g.page/buddysbklyn",
+      "linkText": "Check them out",
+      "description": "Perfect neighborhood taqueria & grill in Carroll Gardens."
+  },
+  {
+      "title": "Tailwind",
+      "subtitle": "",
+      "type": "Dev",
+      "date": "2022-05-20 23:21",
+      "imageClassName": "m-2",
+      "link": "",
+      "linkText": "Get some",
+      "description": "Holy shit, they solved CSS."
+  },
+  {
+      "title": "On Writing Well",
+      "subtitle": "William Zinsser",
+      "type": "Book",
+      "date": "2020-08-16T17:46:37.121Z",
+      "imageClassName": ".5em",
+      "link": "https://bookshop.org/books/on-writing-well-the-classic-guide-to-writing-nonfiction/9780060891541",
+      "linkText": "Grab a copy",
+      "description": "A writing guide with broader applicability to living life."
+  },
+  {
+      "title": "VHB Tape",
+      "subtitle": "3M",
+      "type": "Sundry",
+      "date": "2021-04-02 14:52",
+      "imageClassName": ".25em",
+      "link": "https://smile.amazon.com/dp/B007Y7EWRO",
+      "linkText": "Get some",
+      "description": "“Very High Bond”. Stick anything to anything permanently. Remove it without damage when you change your mind."
+  },
+  {
+      "title": "Workflowy",
+      "type": "Software",
+      "date": "2020-08-16T18:00:00Z",
+      "imageClassName": "3.5em",
+      "link": "https://www.workflowy.com",
+      "description": "The only notetaking app that understands that a brain is shaped like a tree, not a filing cabinet."
+  },
+  {
+      "title": "Aphex Twin",
+      "type": "Music",
+      "date": "2021-05-13 12:43",
+      "link": "https://www.youtube.com/watch?v=yl_zy389rbk&list=PL5SMXYhIcZ5KrbqW82yRAFgzoYcblFCFt",
+      "linkText": "Check him out",
+      "description": "The best kind of artist. A unique master craftsman, a mysterious mythical figure, a genius composer. Possibly an alien."
+  },
+  {
+      "title": "Longmont Potion Castle",
+      "type": "Music",
+      "date": "2021-04-02 14:57",
+      "link": "https://www.youtube.com/watch?v=WnIBMNhor4g",
+      "linkText": "Listen",
+      "description": "Anonymous artist of surrealist prank phone calls, active for 40 years. Enjoyment requires seeing the difference between deliberately dumb and actually stupid."
+  }
+]

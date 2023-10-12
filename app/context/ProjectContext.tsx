@@ -1,8 +1,5 @@
 'use client'
 import { createContext, useContext, useState, PropsWithChildren, useEffect } from "react";
-import { Project, ProjectImage, Org } from "../api/projects/route";
-// import { headers } from "next/headers";
-
 
 interface ProjectsContextType {
   projects: Project[],

@@ -1,5 +1,4 @@
 import { IBM_Plex_Mono, Inter } from 'next/font/google'
-import { Project } from './api/projects/route';
 import { headers } from 'next/headers'
 import Header from "./components/Header"
 import { ProjectsProvider } from './context/ProjectContext';
@@ -19,15 +18,13 @@ const Home: React.FC<Props> = ({}) => {
 
   return (
     <>
-        <ProjectsProvider>
-        <Header />
+      <ProjectsProvider>
+        <Header hideTitle />
         <div className='max-w-6xl mx-auto'>
           <HomeGreeting/>
           <ProjectsGallery />
         </div>
-          
-
-        </ProjectsProvider>
+      </ProjectsProvider>
     </>
   )
 }
