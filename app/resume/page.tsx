@@ -16,7 +16,7 @@ async function ResumePage() {
     <div className='flex flex-col items-center'>
       <div className='max-w-xl mx-8 mt-16 mb-48'> 
       <ResumeSectionWrapper>
-          <h1 className={plex.className + ' text-4xl tracking-tight font-semibold'}>Jake Zien</h1>
+          <h1 className={plex.className + ' text-5xl tracking-tight font-semibold'}>Jake Zien</h1>
           <p className={plex.className + ' text-xl text-stone-500 tracking-tight'}>{resumeData.blurb}</p>
       </ResumeSectionWrapper>
 
