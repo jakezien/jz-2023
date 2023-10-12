@@ -49,9 +49,11 @@ const ProjectsGallery: React.FC<Props> = ({ }) => {
         </div>
         )
       })}
-      <div>
-        <h2 className="pb-40 text-stone-500">More work coming soon :)</h2>
-      </div>
+      {projects.length > 0 &&
+        <div>
+          <h2 className="pb-40 text-stone-500">More work coming soon :)</h2>
+        </div>
+      }
     </div>
   );
 };

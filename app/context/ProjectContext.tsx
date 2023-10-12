@@ -1,4 +1,5 @@
 'use client'
+import { ReadonlyHeaders } from "next/dist/server/web/spec-extension/adapters/headers";
 import { createContext, useContext, useState, PropsWithChildren, useEffect } from "react";
 
 interface ProjectsContextType {
@@ -13,15 +14,15 @@ const ProjectsContext = createContext<ProjectsContextType>({
 
 export const ProjectsProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
-
   const [projects, setProjects] = useState<Project[]>([])
   const [byOrg, setByOrg] = useState<Record<string, Project[]>>({})
   const [orgs, setOrgs] = useState<Org[]>([])
   
   async function getProjectData() {
-    // const domain = headers().get('host');
-    const domain = 'localhost:3000'
-    const res = await fetch(`http://${domain}/api/projects`)
+    const domain = process.env.NEXT_PUBLIC_SITE_URL
+    const url = `${domain}/api/projects`
+    console.log(domain, url )
+    const res = await fetch(url)
     if (!res.ok) {
       throw new Error('Failed to fetch data')
     }
