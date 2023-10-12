@@ -5,12 +5,14 @@ import Image from "next/image";
 import { IBM_Plex_Mono } from "next/font/google"
 const plex = IBM_Plex_Mono({ weight: ['700'], subsets: ['latin'] })
 
-interface Props {
-
-}
+interface Props { }
 
 const ProjectsGallery: React.FC<Props> = ({ }) => {
   const { projects, orgs, byOrg } = useProjects();
+
+  if (projects == undefined) {
+    return (<></>)
+  }
 
   return (
     <div className="px-4">
