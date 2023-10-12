@@ -3,7 +3,7 @@ import { useProjects } from "@/app/context/ProjectContext"
 import { IBM_Plex_Mono } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-const plex = IBM_Plex_Mono({ weight: ['400', '500'], subsets: ['latin'] })
+const plex = IBM_Plex_Mono({ weight: ['400', '700'], subsets: ['latin'] })
 
 interface Props {
   slug: string
@@ -33,7 +33,7 @@ const ProjectDetail: React.FC<Props> = ({ slug, className }) => {
 
   return (
     <div className={"px-6 " + className}>
-      <h1 className="mb-0 leading-tight">{project.title}</h1>
+      <h1 className={"mb-0 leading-tight " + plex.className}>{project.title}</h1>
       <h2 className="mt-0 text-stone-500">at {org.name}</h2>
       <p className={"text-xl leading-tight text-stone-500 max-w-prose ml-0 mt-8 mb-16 " + plex.className}>
         {project.description}

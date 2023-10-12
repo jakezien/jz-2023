@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { useProjects } from "../context/ProjectContext";
 import Image from "next/image";
+import { IBM_Plex_Mono } from "next/font/google"
+const plex = IBM_Plex_Mono({ weight: ['700'], subsets: ['latin'] })
 
 interface Props {
 
@@ -12,7 +14,7 @@ const ProjectsGallery: React.FC<Props> = ({ }) => {
 
   return (
     <div className="px-4">
-      <h1>Work</h1>
+      <h1 className={"" + plex.className}>Work</h1>
       {Object.entries(byOrg).map(([orgName, orgProjects]) => {
         const org: Org = orgs.filter((o) => { return orgName == o.name })[0]
         return (

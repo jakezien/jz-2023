@@ -16,7 +16,7 @@
 
   h1 {
     @apply text-4xl;
-    @apply font-bold;
+    @apply font-semibold;
     @apply leading-tight;
     @apply tracking-tight;
     @apply mt-16;
