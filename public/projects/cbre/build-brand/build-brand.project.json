@@ -22,9 +22,18 @@
       "description": "Pages from the Build brand style guide"
     },
     {
-      "src": "/projects/cbre/build-brand/swag.png",
+      "src": "/projects/cbre/build-brand/swag.jpg",
       "description": "CBRE Build brand swag"
+    },
+    {
+      "src": "/projects/cbre/build-brand/office0.jpg",
+      "description": "The brand in action around the CBRE Build office"
+    },
+    {
+      "src": "/projects/cbre/build-brand/office1.jpg",
+      "description": "The brand in action around the CBRE Build office"
     }
+
   ],
   "press": {
     "name": "Brand New",
