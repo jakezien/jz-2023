@@ -41,7 +41,12 @@ const ProjectDetail: React.FC<Props> = ({ slug, className }) => {
       <div className="">
         {project.images.map((img, i) => {return (
           <div key={i} className="mb-40">
-            <Image src={img.src} alt={img.alt} width={2000} height={1124} />
+            <Image
+              src={img.src} alt={img.alt}
+              width={2000} height={1124}
+              className="transition-opacity opacity-0 duration-500"
+              onLoadingComplete={(image) => {image.classList.remove('opacity-0')}}
+            />
             <p className="mt-4 ml-0 max-w-prose">
               {img.description}
             </p>

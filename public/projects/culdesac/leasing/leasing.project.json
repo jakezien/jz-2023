@@ -6,7 +6,8 @@
   "org": "Culdesac",
   "images": [
     {
-      "src": "/projects/culdesac/leasing/leasing-1.jpg",
+      
+      "src": "https://res.cloudinary.com/dnmtpctxk/image/upload/v1697152004/JZ/Culdesac/leasing-0_qx1per.jpg",
       "description": "Screenshots from the Culdesac leasing application"
     },
     {

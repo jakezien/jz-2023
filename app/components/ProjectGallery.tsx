@@ -11,10 +11,6 @@ interface Props { }
 const ProjectsGallery: React.FC<Props> = ({ }) => {
   const { projects, orgs, byOrg } = useProjects();
 
-  useEffect(() => {
-    console.log(projects)
-  },[projects])
-
   return (
     <div className="px-4">
       <h1 className={"" + plex.className}>Work</h1>
@@ -39,7 +35,8 @@ const ProjectsGallery: React.FC<Props> = ({ }) => {
                     alt={project.images[0].alt}
                     width={1000}
                     height={750}
-                    className="aspect-4/3 object-cover mb-2"
+                    className="aspect-4/3 object-cover mb-2 transition-opacity opacity-0 duration-500"
+                    onLoadingComplete={(image) => {image.classList.remove('opacity-0')}}
                   />
                   <p>{project.title}</p>
                 </div>
