@@ -13,7 +13,7 @@ type Props = {
 
 const Header: React.FC<Props> = ({ className, hideTitle }) => {
   return (
-    <header className={`${className} flex flex-row align items-center p-4 max-w-6xl mx-auto `}>
+    <header className={`${className} flex flex-row align items-center py-4 px-6 max-w-6xl mx-auto `}>
       <div className="flex flex-row items-center justify-between w-full">
         <Link href="/" className="no-underline flex flex-row items-center">
           <Image src={monogramImage} alt="JZ monogram" className="w-10 h-10 mr-2 rounded-sm" width={60} height={60} />
