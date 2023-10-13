@@ -35,7 +35,7 @@ const ProjectsGallery: React.FC<Props> = ({ }) => {
                     alt={project.images[0].alt}
                     width={1000}
                     height={750}
-                    className="aspect-4/3 object-cover transition-opacity opacity-0 duration-500 rounded overflow-hidden"
+                    className="aspect-4/3 object-cover transition-opacity opacity-0 duration-500 "
                     onLoadingComplete={(image) => {image.classList.remove('opacity-0')}}
                   />
                   <p className={"text-lg p-2 pb-6 tracking-tight w-[85%] leading-5 mt-1 text-stone-700 " + Exec.className}>{project.title}</p>
