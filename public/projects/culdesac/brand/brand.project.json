@@ -1,0 +1,19 @@
+{
+  "slug": "brand-work",
+  "title": "Brand work",
+  "description": "Assorted graphic design work for real estate developer building car-free neighborhoods.",
+  "date": "2022",
+  "org": "Culdesac",
+  "images": [
+    {
+      "src": "/projects/culdesac/brand/hack-week.jpg",
+      "description": "Design for hack week t-shirts",
+      "bgColor": "#049134"
+    },
+    {
+      "src": "/projects/culdesac/brand/cholla.jpg",
+      "description": "Branding for Little Cholla, Culdesac's night market",
+      "bgColor": "#fff"
+    }
+  ]
+}

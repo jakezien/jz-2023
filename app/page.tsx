@@ -1,40 +1,36 @@
 import { IBM_Plex_Mono, Inter } from 'next/font/google'
-import { Project } from './api/projects/route';
-import Gallery from './components/Gallery'
 import Header from "./components/Header"
-import {headers} from 'next/headers'
-import { GalleryProvider } from './context/GalleryContext';
-import GalleryInfo from './components/GalleryInfo';
+import { ProjectsProvider } from './context/ProjectContext';
+import ProjectsGallery from './components/ProjectGallery';
+import HomeGreeting from './components/HomeGreeting';
+import { FavesProvider } from './context/FavesContext';
+import FavesGallery from './components/FavesGallery';
 
 const plex = IBM_Plex_Mono({ weight: ['700'], subsets: ['latin'] })
 const inter = Inter({ weight: ['400','500'], subsets: ['latin'] })
 
-export default async function Home() {
 
-  async function getProjectData() {
-    const domain = headers().get('host');
-    const res = await fetch(`http://${domain}/api/projects`)
-    if (!res.ok) {
-      throw new Error('Failed to fetch data')
-    }
-    return res.json()
-  }
+interface Props {
 
-  let h1ClassName = plex.className + " font-bold tracking-normal my-2 cursor-pointer"
-  let data = await getProjectData()
-  let projects: Project[] = data.projects
+}
+
+const Home: React.FC<Props> = ({}) => {
 
   return (
     <>
-        <GalleryProvider projects={projects}>
-      <div className='h-full w-full lg:flex lg:flex-row lg:items-center'>
-        <Header className='lg:order-first lg:w-1/4'/>
-        <figure className='aspect-3/4 lg:w-3/4 lg:h-full'>
-            <Gallery className={`w-full h-full`} />
-            <GalleryInfo className={'lg:hidden'} />
-        </figure>
-      </div>
-          </GalleryProvider>
+      <ProjectsProvider>
+        <FavesProvider>
+          <Header hideTitle />
+          <div className='max-w-6xl mx-auto'>
+            <HomeGreeting/>
+            <ProjectsGallery />
+            {/* <FavesGallery /> */}
+          </div>
+        </FavesProvider>
+      </ProjectsProvider>
     </>
   )
 }
+
+
+export default Home

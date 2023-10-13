@@ -1,0 +1,42 @@
+{
+  "slug": "build-brand",
+  "title": "CBRE Build brand",
+  "description": "Invented a tech brand for the world's largest commercial real estate company.",
+  "date": "2016",
+  "org": "CBRE",
+  "images": [
+    {
+      "src": "/projects/cbre/build-brand/cover.png",
+      "description": "CBRE Build brand graphics, featuring my circuit-map illustration"
+    },
+    {
+      "src": "/projects/cbre/build-brand/bob-the-builder.jpg",
+      "description": "CEO Bob Sulentic with CBRE Build graphics"
+    },
+    {
+      "src": "/projects/cbre/build-brand/signs.jpg",
+      "description": "Custom room signs at the CBRE Build office"
+    },
+    {
+      "src": "/projects/cbre/build-brand/style-guide.png",
+      "description": "Pages from the Build brand style guide"
+    },
+    {
+      "src": "/projects/cbre/build-brand/swag.jpg",
+      "description": "CBRE Build brand swag"
+    },
+    {
+      "src": "/projects/cbre/build-brand/office0.jpg",
+      "description": "The brand in action around the CBRE Build office"
+    },
+    {
+      "src": "/projects/cbre/build-brand/office1.jpg",
+      "description": "The brand in action around the CBRE Build office"
+    }
+
+  ],
+  "press": {
+    "name": "Brand New",
+    "url": "https://www.underconsideration.com/brandnew/archives/new_logo_and_identity_for_cbre_build_done_in_house.php"
+  }
+}

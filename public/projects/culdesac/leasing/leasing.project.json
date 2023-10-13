@@ -1,0 +1,26 @@
+{
+  "slug": "leasing-app",
+  "title": "Leasing ecommerce app",
+  "description": "Led redesign of the app that enables the public to browse and lease apartments at Culdesac, plus followup A/B test of this new flow.",
+  "date": "June 2023",
+  "org": "Culdesac",
+  "images": [
+    {
+      
+      "src": "https://res.cloudinary.com/dnmtpctxk/image/upload/v1697152004/JZ/Culdesac/leasing-0_qx1per.jpg",
+      "description": "Screenshots from the Culdesac leasing application"
+    },
+    {
+      "src": "/projects/culdesac/leasing/leasing-1.jpg",
+      "description": "Screenshots from the Culdesac leasing application"
+    },
+    {
+      "src": "/projects/culdesac/leasing/leasing-orangeprint.jpg",
+      "description": "Markup for handoff to engineers"
+    },
+    {
+      "src": "/projects/culdesac/leasing/leasing-process.jpg",
+      "description": "Wireframes and process work"
+    }
+  ]
+}
