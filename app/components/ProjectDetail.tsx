@@ -3,7 +3,9 @@ import { useProjects } from "@/app/context/ProjectContext"
 import { IBM_Plex_Mono } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-const plex = IBM_Plex_Mono({ weight: ['400', '700'], subsets: ['latin'] })
+import { H1, H2 } from "./TypeStyles"
+import { Exec } from "./LocalFonts"
+
 
 interface Props {
   slug: string
@@ -33,9 +35,9 @@ const ProjectDetail: React.FC<Props> = ({ slug, className }) => {
 
   return (
     <div className={"px-6 " + className}>
-      <h1 className={"mb-0 leading-tight " + plex.className}>{project.title}</h1>
-      <h2 className="mt-0 text-stone-500">at {org.name}</h2>
-      <p className={"text-xl leading-tight text-stone-500 max-w-prose ml-0 mt-8 mb-16 " + plex.className}>
+      <H1 className={"mb-0 leading-tight text-stone-800  "}>{project.title}</H1>
+      <H2 className={"mt-0 "}>at {org.name}</H2>
+      <p className={'text-2xl text-stone-500 tracking-tight leading-7 mt-4 mb-8 w-10/12 ' + Exec.className}>
         {project.description}
       </p>
       <div className="">
@@ -47,7 +49,7 @@ const ProjectDetail: React.FC<Props> = ({ slug, className }) => {
               className="transition-opacity opacity-0 duration-500"
               onLoadingComplete={(image) => {image.classList.remove('opacity-0')}}
             />
-            <p className="mt-4 ml-0 max-w-prose">
+            <p className={"text-xl tracking-tight mt-4 ml-0 max-w-prose " + Exec.className}>
               {img.description}
             </p>
           </div>
@@ -55,7 +57,7 @@ const ProjectDetail: React.FC<Props> = ({ slug, className }) => {
       </div>
       <div className="pb-40">
 
-        <Link href="/" className={"text-xl " + plex.className}>
+        <Link href="/" className={"text-xl " + Exec.className}>
           <span className="underline">All projects</span> &rarr;
         </Link>
 

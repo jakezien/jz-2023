@@ -4,6 +4,8 @@ import React from 'react';
 import { Brag } from './ResumeTypes';
 import ResumeItemWrapper from './ResumeItemWrapper';
 import { IBM_Plex_Mono } from 'next/font/google'
+import { H2 } from '../components/TypeStyles';
+
 const plex = IBM_Plex_Mono({ weight: ['400', '600'], subsets: ['latin'] })
 
 type Props = {

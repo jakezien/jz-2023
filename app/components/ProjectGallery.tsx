@@ -3,10 +3,8 @@ import Link from "next/link";
 import { useProjects } from "../context/ProjectContext";
 import Image from "next/image";
 import { IBM_Plex_Mono } from "next/font/google"
-import { Inter } from "next/font/google"
-import { useEffect } from "react";
-const plex = IBM_Plex_Mono({ weight: ['700'], subsets: ['latin'] })
-// const inter = Inter({ weight: ['500'], subsets: ['latin'] })
+import { Exec } from "./LocalFonts";
+import {H1, H2} from "./TypeStyles";
 
 interface Props { }
 
@@ -15,32 +13,32 @@ const ProjectsGallery: React.FC<Props> = ({ }) => {
 
   return (
     <div className="px-4">
-      <h1 className={"" + plex.className}>Work</h1>
+      <H1 className="mb-4">Work</H1>
       {Object.entries(byOrg).map(([orgName, orgProjects]) => {
         const org: Org = orgs.filter((o) => { return orgName == o.name })[0]
         return (
         <div key={org.slug} className="mb-16 md:flex md:flex-row">
           <div className="md:w-1/4 flex-shrink-0 pr-8">
-              <h2 className="leading-tight text-stone-700 text-stone mt-0">
+              <H2 className={" text-stone-700 mt-0 "}>
                 {org.name}
-              </h2>
-              <p className="mb-4 leading-tight text-stone-500 ">
+              </H2>
+              <p className={"mb-4 leading-[1.125rem] text-stone-500 tracking-tight w-7/8  " + Exec.className}>
                 {org.description}
               </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-1.5 gap-y-2">
             {orgProjects.map((project, index) => (
               <Link href={`/projects/${org.slug}-${project.slug}`} key={index}>
-                <div className="overflow-hidden bg-white p-3 pb-6 rounded-md shadow-sm transition-all hover:scale-[101%] hover:shadow-md ease-in-out duration-200">
+                <div className="overflow-hidden bg-white rounded-md shadow-sm transition-all hover:scale-[101%] hover:shadow-md ease-in-out duration-200">
                   <Image
                     src={project.images[0].src}
                     alt={project.images[0].alt}
                     width={1000}
                     height={750}
-                    className="aspect-4/3 object-cover mb-2 transition-opacity opacity-0 duration-500 rounded overflow-hidden"
+                    className="aspect-4/3 object-cover transition-opacity opacity-0 duration-500 rounded overflow-hidden"
                     onLoadingComplete={(image) => {image.classList.remove('opacity-0')}}
                   />
-                  <p className={"text-lg font-medium "}>{project.title}</p>
+                  <p className={"text-lg p-2 pb-6 tracking-tight w-[85%] leading-5 mt-1 text-stone-700 " + Exec.className}>{project.title}</p>
                 </div>
               </Link>
             ))}
@@ -50,7 +48,7 @@ const ProjectsGallery: React.FC<Props> = ({ }) => {
       })}
       {projects.length > 0 &&
         <div>
-          <h2 className="pb-40 text-stone-500">More work coming soon :)</h2>
+          <p className={"pb-40 text-stone-300 text-4xl tracking-[-0.04em] " + Exec.className}>More work coming soon :)</p>
         </div>
       }
     </div>

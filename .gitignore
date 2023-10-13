@@ -36,3 +36,13 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+app/fonts/Executive-Bold.otf
+app/fonts/Executive-BoldIta.otf
+app/fonts/Executive-Light.otf
+app/fonts/Executive-LightIta.otf
+app/fonts/Executive-Medium.otf
+app/fonts/Executive-MediumIta.otf
+app/fonts/Executive-Regular.otf
+app/fonts/Executive-RegularIta.otf
+app/fonts/Executive-Thin.otf
+app/fonts/Executive-ThinIta.otf

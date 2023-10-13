@@ -1,7 +1,9 @@
 import { Experience } from './ResumeTypes';
 import ResumeItemWrapper from './ResumeItemWrapper';
 import { IBM_Plex_Mono } from 'next/font/google'
-const plex = IBM_Plex_Mono({ weight: ['400', '600'], subsets: ['latin'] })
+import { H2 } from '../components/TypeStyles';
+import { Exec } from '../components/LocalFonts';
+
 
 type Props = {
     item: Experience;
@@ -22,7 +24,7 @@ const ResumeItemExperience: React.FC<Props> = ({ item }) => {
 
             <ul className='mb-2'>
                 {item.description.map((desc, index) => (
-                    <li key={index}>{desc}</li>
+                    <li key={index} className='mb-2 text-stone-700 '>{desc}</li>
                 ))}
             </ul>
         </ResumeItemWrapper>

@@ -7,21 +7,27 @@ import ResumeItemTech from './ResumeItemTech';
 import ResumeSectionWrapper from './ResumeSectionWrapper';
 import { IBM_Plex_Mono } from 'next/font/google'
 import resumeJson from '../../public/resume.json'
+import { H1 } from '../components/TypeStyles';
+import { Exec } from '../components/LocalFonts';
+import Header from '../components/Header';
 const plex = IBM_Plex_Mono({ weight: ['400', '700'], subsets: ['latin'] })
 
 async function ResumePage() {
   let resumeData = resumeJson as ResumeData
   let h1ClassName = plex.className + " font-bold tracking-normal"
   return (
+    <>
+      <Header hideTitle className='max-w-prose px-8'/>
     <div className='flex flex-col items-center'>
-      <div className='max-w-xl mx-8 mt-16 mb-48'> 
+      <div className='max-w-xl mx-6 mb-48'> 
       <ResumeSectionWrapper>
-          <h1 className={plex.className + ' text-5xl tracking-tight font-semibold'}>Jake Zien</h1>
-          <p className={plex.className + ' text-xl text-stone-500 tracking-tight'}>{resumeData.blurb}</p>
+          <H1 className={' text-5xl tracking-tight font-semibold'}>Jake Zien</H1>
+          <p className={Exec.className + ' text-xl text-stone-500 tracking-tight'}>{resumeData.blurb}</p>
       </ResumeSectionWrapper>
 
       <ResumeSectionWrapper>
-        <h1 className={h1ClassName}>Experience</h1>
+
+        <H1>Experience</H1>
         {resumeData.experience.map((experienceItem: Experience) => (
             <ResumeItemExperience key={experienceItem.id} item={experienceItem} />
         ))}
@@ -29,14 +35,14 @@ async function ResumePage() {
       </ResumeSectionWrapper>
   
       <ResumeSectionWrapper>
-        <h1 className={h1ClassName}>Brags</h1>
+        <H1>Brags</H1>
         {resumeData.brags.map((bragItem: Brag) => (
             <ResumeItemBrag key={bragItem.id} item={bragItem} />
         ))}
       </ResumeSectionWrapper>
 
       <ResumeSectionWrapper>
-        <h1 className={h1ClassName}>Education</h1>
+        <H1>Education</H1>
         {resumeData.education.map((educationItem: Education) => (
             <ResumeItemEducation key={educationItem.id} item={educationItem} />
         ))}
@@ -44,14 +50,14 @@ async function ResumePage() {
       
 
       <ResumeSectionWrapper>
-        <h1 className={h1ClassName}>Tech</h1>
+        <H1>Tech</H1>
         <ul>
           {resumeData.tech.map((techItem: string) => (
             <ResumeItemTech key={resumeData.tech.indexOf(techItem)} item={techItem}/>
           ))}
         </ul>
         
-        <h1 className={h1ClassName}>Personal</h1>
+        <H1>Personal</H1>
         <ul>
           {resumeData.personal.map((personalItem: string) => (
             <ResumeItemPersonal key={resumeData.personal.indexOf(personalItem)} item={personalItem}/>
@@ -61,7 +67,8 @@ async function ResumePage() {
         
       </ResumeSectionWrapper>
       </div>
-    </div>
+      </div>
+      </>
   );
 }
 
