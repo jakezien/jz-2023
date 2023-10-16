@@ -1,6 +1,20 @@
 {
-    "blurb": "Full-stack product guy with 12+ years' experience getting startups started.\nBusiness-minded designer, design-minded engineer, communication-minded PM.",
+    "blurb": "Full-stack product designer with 12+ years' experience getting startups started. Business-minded designer, design-minded engineer, great communicator and team player.",
     "experience": [
+        {
+            "id": 0,
+            "company": "Adyton (Contract)",
+            "companyOneliner": "Startup building productivity apps for the US Navy & Air Force",
+            "title": "Lead Product Designer",
+            "startDate": "September 2023",
+            "endDate": "present",
+            "description": [
+                "Own the design of Adyton's suite of messaging and scheduling apps for the US Air Force, Navy, and Army",
+                "Used design research into military workflows to help the team discover risks and holes in their product strategy ",
+                "Led a successful new design strategy that overcomes these risks by making most of the app experience happen over SMS",
+                "A headfirst dive into the military, a new information space (to me) with unique jobs and use cases"
+            ]
+        },
         {
             "id": 1,
             "company": "Culdesac",
@@ -17,11 +31,11 @@
             ]
         },
         {
-            "id": 1,
+            "id": 2,
             "company": "CBRE Build",
             "companyOneliner": "Fortune 150 real estate company's software innovation team",
             "title": "Senior Product Designer",
-            "startDate": "January 2016",
+            "startDate": "January 2017",
             "endDate": "September 2021",
             "description": [
                 "Led design and co-led product for Site IQ, a modern web application for broker teams; product's value & strategy were durable enough that it is still in active use & development",
@@ -32,13 +46,13 @@
             ]
         },
         {
-            "id": 1,
+            "id": 3,
             "company": "Floored",
             "companyOneliner": "Eng-driven maker of online 3D tools for real estate teams",
-            "companyExit": "Acquired by CBRE Jan 2016",
+            "companyExit": "Acquired by CBRE Jan 2017",
             "title": "Founding Designer",
             "startDate": "March 2012",
-            "endDate": "January 2016",
+            "endDate": "January 2017",
             "description": [
                 "Collaborated directly with founders and founding engineers  to own ux and ui design for Floored's flagship software products",
                 "First design hire",
@@ -74,7 +88,7 @@
             "achievements": []
         },
         {
-            "id": 1,
+            "id": 2,
             "school": "Brown University",
             "location": "Providence, RI",
             "degreeType": "Minor",
@@ -86,7 +100,7 @@
     ],
     "brags": [
         {
-            "id": 1,
+            "id": 3,
             "title": "'Inventor' of Pivot Power",
             "publisher": "Quirky",
             "startDate": "2010",

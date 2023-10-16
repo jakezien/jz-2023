@@ -4,7 +4,8 @@ import { IBM_Plex_Mono } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
 import { H1, H2 } from "./TypeStyles"
-import { Exec } from "./LocalFonts"
+import { Bau } from "./LocalFonts"
+import PivotPowerContent from "./PivotPowerContent"
 
 
 interface Props {
@@ -33,35 +34,51 @@ const ProjectDetail: React.FC<Props> = ({ slug, className }) => {
     )
   } 
 
-  return (
-    <div className={"px-6 " + className}>
-      <H1 className={"mb-0 leading-tight text-stone-800  "}>{project.title}</H1>
+  const projectHeader = (
+    <div className="px-6">
+      <H1 className={"mb-0 mt-4 leading-tight text-stone-800 "}><span className="">{project.title}</span></H1>
       <H2 className={"mt-0 "}>at {org.name}</H2>
-      <p className={'text-2xl text-stone-500 tracking-tight leading-7 mt-4 mb-8 w-10/12 ' + Exec.className}>
+      <p className={'text-2xl text-stone-500 leading-7 mt-4 mb-8 w-10/12 ' + Bau.className}>
         {project.description}
       </p>
-      <div className="">
-        {project.images.map((img, i) => {return (
-          <div key={i} className="mb-40">
-            <Image
-              src={img.src} alt={img.alt}
-              width={2000} height={1124}
-              className="transition-opacity opacity-0 duration-500"
-              onLoadingComplete={(image) => {image.classList.remove('opacity-0')}}
-            />
-            <p className={"text-xl tracking-tight mt-4 ml-0 max-w-prose " + Exec.className}>
-              {img.description}
-            </p>
-          </div>
-        )})}
-      </div>
-      <div className="pb-40">
+    </div>
+  )
 
-        <Link href="/" className={"text-xl " + Exec.className}>
-          <span className="underline">All projects</span> &rarr;
+  const projectImagesContent = (
+    <div className="px-6">
+      {project.images.map((img, i) => {return (
+        <div key={i} className="mb-40">
+          <Image
+            src={img.src} alt={img.alt}
+            width={2000} height={1124}
+            className="transition-opacity opacity-0 duration-500"
+            onLoadingComplete={(image) => {image.classList.remove('opacity-0')}}
+          />
+          <p className={"text-xl mt-4 ml-0 max-w-prose text-stone-700 " }>
+            {img.description}
+          </p>
+        </div>
+      )
+      })}
+    </div>
+  )
+
+  const projectFooter = (
+    <div className="pb-40 p-6">
+      <Link href="/" className={"text-4xl text-stone-600 hover:text-stone-500 active:text-stone-400 " + Bau.className}>
+          <span className="underline ">All projects</span> &rarr;
         </Link>
-
       </div>
+  )
+
+  return (
+    <div>
+      {projectHeader}
+      {project.slug === 'pivot-power' ? 
+        <PivotPowerContent project={project} /> :
+        projectImagesContent
+      }
+      {projectFooter}
     </div>
   )
 }

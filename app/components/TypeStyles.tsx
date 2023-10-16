@@ -1,5 +1,5 @@
 import { Children, PropsWithChildren } from "react";
-import { Exec } from "./LocalFonts";
+import { Bau } from "./LocalFonts";
 
 interface Props {
   className?: string
@@ -8,8 +8,8 @@ interface Props {
 export const H1: React.FC<PropsWithChildren<Props>> = ({className, children}) => {
 
   const classes = [
-    'font-bold text-[2.5rem] tracking-tighter ',
-    Exec.className,
+    'font-bold text-5xl tracking-tight ',
+    Bau.className,
     className ?? ''
   ]
 
@@ -24,8 +24,8 @@ export const H1: React.FC<PropsWithChildren<Props>> = ({className, children}) =>
 export const H2: React.FC<PropsWithChildren<Props>> = ({className, children}) => {
 
   const classes = [
-    'font-bold text-2xl leading-tight text-stone-600 tracking-tighter ',
-    Exec.className,
+    'font-bold text-2xl leading-tight text-stone-600 tracking-[-0.0125em]',
+    Bau.className,
     className ?? ''
   ]
 

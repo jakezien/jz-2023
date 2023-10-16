@@ -14,7 +14,9 @@ const config: Config = {
         '4/3': '4 / 3',
       },
       colors: {
-        "designOrange": "#FF6B00"
+        "designOrange": "#FF6B00",
+        "logoYellow": "#FFA200"
+
       }
     },
   },
