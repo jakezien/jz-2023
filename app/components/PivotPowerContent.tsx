@@ -18,7 +18,7 @@ const PivotPowerContent: React.FC<Props> = ({project}) => {
             className="transition-opacity opacity-0 duration-500"
             onLoadingComplete={(image) => {image.classList.remove('opacity-0')}}
           />
-          <p className={"text-xl tracking-tight mt-4 ml-0 max-w-prose " + Bau.className}>
+          <p className={"text-xl mt-4 ml-0 max-w-prose text-stone-700 " }>
             {img.description}
           </p>
         </div>

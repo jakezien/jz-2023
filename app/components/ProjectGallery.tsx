@@ -13,7 +13,7 @@ const ProjectsGallery: React.FC<Props> = ({ }) => {
 
   return (
     <div className="px-4">
-      <H1 className="mb-4 text-stone-400 ">Work</H1>
+      <H1 className="mb-4 text-stone-600 ">Work</H1>
       {Object.entries(byOrg).map(([orgName, orgProjects]) => {
         const org: Org = orgs.filter((o) => { return orgName == o.name })[0]
         return (
