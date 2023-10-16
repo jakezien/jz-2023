@@ -1,15 +1,22 @@
-import { IBM_Plex_Mono, Inter } from 'next/font/google'
+import { Bau } from './LocalFonts'
 import Link from 'next/link'
-const plex = IBM_Plex_Mono({ weight: ['400','700'], subsets: ['latin'] })
-const inter = Inter({ weight: ['400','500'], subsets: ['latin'] })
+import { H1 } from './TypeStyles'
+
 
 const HomeGreeting: React.FC = () => {
   
 
   return (
     <div className='mb-16 px-4 max-w-prose ml-0'>
-      <h1 className={'mt-4 mb-1 font-bold text-4xl '+ plex.className}>Jake Zien</h1>
-      <p className={'text-xl text-stone-500 ' + plex.className}>Business-minded product designer, design-minded developer. Check out <Link href={'/resume'} className='inline underline text-stone-500'>my resume.</Link></p>
+
+      <H1 className='mb-4 mt-4 text-stone-800'>Jake Zien</H1>
+      <p className={'text-2xl text-stone-500  leading-7 ' + Bau.className}>
+        Business-minded product designer, design-minded developer.
+        Check out&nbsp;
+        <Link href={'/resume'} className='inline underline underline-offset-2 text-stone-600 hover:text-stone-500 active:text-stone-400'>
+          my resume.
+        </Link>
+       </p>
     </div>
   )
 }
